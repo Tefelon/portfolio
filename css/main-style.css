@@ -90,7 +90,6 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
-    min-width: 300px;
     width: 300px;
     height: 100vh;
     box-sizing: border-box;
@@ -100,6 +99,7 @@ body {
     justify-content: space-between;
 
     font-size: 1rem;
+    transition: 500ms;
 }
 
 .nav-menu h1 {
@@ -173,6 +173,32 @@ body {
     color: #FFFA1F;
 }
 
+.menu-small-button {
+    /*display: none;*/
+    visibility: hidden;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    min-height: 130px;
+    width: 130px;
+    z-index: 2;
+
+    border: 3px solid #FFFA1F;
+    border-radius: 20px;
+    background: #1E1E1E;
+    opacity: 0.85;
+
+    text-align: center;
+    line-height: 120px;
+}
+
+.menu-small-button h2 {
+    font-family: 'Round', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFFA1F;
+}
+
 /* Стили для основной части страницы */
 
 .main-page {
@@ -184,6 +210,7 @@ body {
     grid-gap: 0;
 
     height: 100vh;
+    transition: 400ms;
 }
 
 .main-page img {
@@ -231,4 +258,77 @@ body {
 .psevdo-menu {
     grid-area: menu;
     height: 100vh;
+}
+
+
+/* Адаптация через медиа-запросы */
+
+@media (max-width: 1200px) {
+    
+    .main-page {
+        grid-template-areas: "menu . ."
+                            "menu . ." 
+                            "menu . ."   ;
+        grid-template-columns: 300px 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 900px), (max-height: 550px) {
+
+    .nav-menu {
+        width: 250px;
+        font-size: 0.8rem;
+    }
+
+    .nav-menu li a {
+        font-size: 1.4em;
+    }
+
+    .main-page {
+        grid-template-columns: 250px 1fr 1fr;
+    }
+
+    .main-page a {
+        filter: grayscale(0);
+    }
+
+    .main-page a:after {
+        top: 2em;
+    }
+
+
+}
+
+@media (max-width: 700px), (max-height: 400px) {
+
+    .menu-small-button {
+        visibility: visible;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .main-page {
+        grid-template-columns: 0 1fr 1fr;
+        
+    }
+
+    .main-page a[alt^="Виртуальные"]:after {
+        top: 6em;
+    }
+}
+
+@media (max-height: 500px) {
+
+    .nav-menu address {
+        display: none;
+    }
+
+    .nav-menu div {
+        display: none;
+    }
+
 }
