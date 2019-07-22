@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Round";
+    src: url('../fonts/MPLUSRounded1c-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "MarkScript";
+    src: url('../fonts/MarckScript-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+.panorama {
+    overflow: auto;
+}
+
+.panorama-main-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    padding: 0 15px;
+}
+
+.panorama-psevdo-menu {
+    width: 300px;
+    min-width: 300px;
+}
+
+.panorama-main {
+    width: 100%;
+    text-align: center;
+}
+
+.panorama-main h2 {
+    font-size: 2em;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.panorama-main h2:first-letter {
+    font-size: 1.3em;
+}
+
+.panorama-main article {
+    margin: 10px;
+}
+
+.panorama-main h3 {
+    font-size: 1.2em;
+    padding: 15px 10px;
+}
+
+.panorama-main img {
+    height: 300px; 
+}
+
+.panorama-main p {
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 920px), (max-height: 550px) {
+
+    .panorama-psevdo-menu {
+        width: 250px;
+        min-width: 250px; 
+    }
+
+    .panorama-main img {
+        height: 200px;
+    }
+
+    .panorama-main h3 {
+        font-size: 1em;
+        padding: 10px 10px;
+    }   
+}
+
+@media (max-width: 700px), (max-height: 450px) {
+
+    .panorama-psevdo-menu {
+        width: 0;
+        min-width: 0; 
+    }
+
+    .panorama-main p {
+        height: 60px;
+    }
+
+}
+
+@media (min-width: 1350px) {
+
+    .panorama-main-vt {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .panorama-main-vt img {
+        height: 250px;
+    }
+
+    .panorama-main-vt article {
+        max-height: 320px;
+    }
+}

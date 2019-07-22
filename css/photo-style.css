@@ -1,0 +1,56 @@
+body {
+    overflow: auto;
+}
+
+.photo-main-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.photo-psevdo-menu {
+    width: 300px;
+    min-width: 300px;
+    height: 100vh;
+}
+
+.photo-main h2 {
+    font-size: 2em;
+    text-align: center;
+    padding: 20px 0;
+    
+}
+
+.photo-main h2:first-letter {
+    size: 2.8em; 
+    color: red;
+}
+
+.photo-main p {
+    height: 30px;
+}
+
+article h3 {
+    padding: 10px 20px;
+}
+
+article img {
+    height: 100px;
+}
+
+article div {
+    padding: 10px 0;
+}
+
+
+@media (max-width: 700px) {
+
+    .photo-psevdo-menu {
+        width: 0;
+        min-width: 0;
+    }
+
+    .photo-main p {
+        height: 70px;
+    }
+}

@@ -80,9 +80,49 @@ table {
     font-weight: normal;
 }
 
+.font-head {
+    font-family: 'MarkScript', serif;
+    color: #FFFA1F;
+}
+
+.font-content {
+    font-family: 'Round', sans-serif;
+    color: #EAEAEA;
+}
+
+.bord-bot {
+    border-bottom: 1px solid #EAEAEA;
+}
+
 body {
     background: #1E1E1E;
     overflow: hidden;
+}
+
+.menu-small-button {
+    /*display: none;*/
+    visibility: hidden;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    min-height: 130px;
+    width: 130px;
+    z-index: 2;
+
+    border: 3px solid #FFFA1F;
+    border-radius: 20px;
+    background: #1E1E1E;
+    opacity: 0.85;
+
+    text-align: center;
+    line-height: 120px;
+}
+
+.menu-small-button h2 {
+    font-family: 'Round', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #FFFA1F;
 }
 
 .nav-menu {
@@ -106,9 +146,7 @@ body {
     min-height: 130px;
     height: 25%;
 
-    font-family: 'MarkScript', serif;
     font-size: 1.8em;
-    color: #FFFA1F;
     text-align: center;
     line-height: 1.1;
 
@@ -116,7 +154,7 @@ body {
 }
 
 .nav-menu h1:first-letter {
-    font-size: 1.5em;
+    font-size: 1.5em; color: red;
 }
 
 .nav-menu nav {
@@ -130,9 +168,7 @@ body {
     display: block;
     padding: 0 10px;
 
-    font-family: 'Round',sans-serif;
     font-size: 1.1em;
-    color: #EAEAEA;
     line-height: 2.4;
 
     border-radius: 5px;
@@ -150,9 +186,7 @@ body {
     height: 13%;
     padding: 5px 10px 5px 15px;
 
-    font-family: 'MarkScript',serif;
     font-size: 1.2em;
-    color: #FFFA1F;
 }
 
 .nav-menu address h2 {
@@ -169,35 +203,9 @@ body {
 .nav-menu>div {
     height: 7%;
     padding: 5px 10px;
-
-    color: #FFFA1F;
 }
 
-.menu-small-button {
-    /*display: none;*/
-    visibility: hidden;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    min-height: 130px;
-    width: 130px;
-    z-index: 2;
 
-    border: 3px solid #FFFA1F;
-    border-radius: 20px;
-    background: #1E1E1E;
-    opacity: 0.85;
-
-    text-align: center;
-    line-height: 120px;
-}
-
-.menu-small-button h2 {
-    font-family: 'Round', sans-serif;
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #FFFA1F;
-}
 
 /* Стили для основной части страницы */
 
@@ -275,7 +283,7 @@ body {
 }
 
 
-@media (max-width: 900px), (max-height: 550px) {
+@media (max-width: 920px), (max-height: 550px) {
 
     .nav-menu {
         width: 250px;
@@ -301,7 +309,7 @@ body {
 
 }
 
-@media (max-width: 700px), (max-height: 400px) {
+@media (max-width: 700px), (max-height: 450px) {
 
     .menu-small-button {
         visibility: visible;
