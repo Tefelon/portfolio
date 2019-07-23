@@ -36,10 +36,16 @@ article h3 {
 
 article img {
     height: 100px;
+    cursor: pointer;
 }
 
 article div {
     padding: 10px 0;
+}
+
+.ortophoto-preview img {
+    padding: 5px 5px;
+    height: 200px;
 }
 
 
